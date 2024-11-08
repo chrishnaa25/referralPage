@@ -6,6 +6,9 @@ import ReferralDashboard from "./screens/ReferralDashboard";
 import { useFonts } from "expo-font";
 import Home from "./screens/Home";
 import { Ionicons } from "@expo/vector-icons";
+import Addresses from "./screens/Addresses";
+import AddAddress from "./screens/AddAddress";
+import Location from "./screens/Location";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,8 +21,8 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} />
+      <Stack.Navigator>
+        {/* <Stack.Screen name="Home" component={Home} />
         <Stack.Screen
           name="Referral Dashboard"
           component={ReferralDashboard}
@@ -40,7 +43,10 @@ export default function App() {
               alignItems: "center",
             },
           }}
-        />
+        /> */}
+        <Stack.Screen name="Addresses" component={Addresses} />
+        <Stack.Screen name="Select Location" component={Location} />
+        <Stack.Screen name="Add Address" component={AddAddress} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
